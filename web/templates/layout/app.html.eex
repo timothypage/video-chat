@@ -20,6 +20,7 @@
             <li><a href="#"><%= @current_user.username %></a></li>
             <li>
               <%= link "Log Out", to: session_path(@conn, :delete, @current_user), method: "delete" %>
+              <%= link "My Videos", to: video_path(@conn, :index) %></li>
             </li>
           <% else %>
             <li><%= link "Register", to: user_path(@conn, :new) %></li>
